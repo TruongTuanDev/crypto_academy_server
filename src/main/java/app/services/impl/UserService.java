@@ -39,14 +39,15 @@ public class UserService implements IUserService{
     }
     @Override
     public User createUser(SignUpForm userResquest, Role role) {
-      User user = User.builder()
-      .fullName(userResquest.getFullName())
-      .phone(userResquest.getPhoneNumber())
-      .password(userResquest.getPassword())
-      .idCountry(userResquest.getIdCountry())
-      .roles(role)
-      .build();
-      return userRepository.save(user);
+      User user = new User();
+      user.setFullName(userResquest.getFullName());
+      user.setPhone(userResquest.getPhone());
+      user.setIdCountry(userResquest.getIdCountry());
+      user.setPassword(userResquest.getPassword());
+      user.setRoles(role.ROLE_CUSTOMER);
+
+      user = userRepository.save(user);
+      return user;
     }
     @Override
     public Boolean existsByEmail(String email) {

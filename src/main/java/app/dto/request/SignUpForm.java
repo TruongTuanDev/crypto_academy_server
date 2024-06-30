@@ -22,35 +22,23 @@ public class SignUpForm {
 
     private String password;
 
-    private String confirmPassword;
-
-    private String phoneNumber;
+    private String rePassword;
+ 
+    private String phone;
 
     private String idCountry;
 
-    private String email;
+//     public void validate(List<User> list, SignUpForm signUpForm, Errors errors){
+//       for (User user : list) {
+//           if (Objects.equals(user.getPhone(), signUpForm.getPhone())) {
+//               errors.rejectValue("phone", "phone", "Số điện thoại " + signUpForm.getPhoneNumber() + " đã được sử dụng");
+//           }
 
-    private String address;
+//       }
+//       if (!Objects.equals(signUpForm.getPassword(), signUpForm.getRePassword())) {
+//           errors.rejectValue("rePassword", "rePassword", "Mật khẩu xác nhận không trùng khớp ");
 
-    private String sex;
-
-    private String dateOfBirth;
-
-    private String avatar;
-
-    private Role roles;
-
-    public void validate(List<User> list, SignUpForm signUpForm, Errors errors){
-      for (User user : list) {
-          if (Objects.equals(user.getPhone(), signUpForm.getPhoneNumber())) {
-              errors.rejectValue("phoneNumber", "phoneNumber", "Số điện thoại " + signUpForm.getPhoneNumber() + " đã được sử dụng");
-          }
-
-      }
-      if (!Objects.equals(signUpForm.getPassword(), signUpForm.getConfirmPassword())) {
-          errors.rejectValue("confirmPassword", "confirmPassword", "Mật khẩu xác nhận không trùng khớp ");
-
-      }
-  }
+//       }
+//   }
   }
 
