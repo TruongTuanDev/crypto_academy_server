@@ -12,9 +12,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan({ "app.*" })
 @EnableJpaRepositories(basePackages = "app.repositories")
 @EntityScan(basePackages = "app.models")
-public class SpringbootTutorialApplication {
+public class CryptoAcademyApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootTutorialApplication.class, args);
+		SpringApplication.run(CryptoAcademyApplication.class, args);
 	}
 
 }
