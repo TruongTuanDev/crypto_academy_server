@@ -43,7 +43,7 @@ public class UserService implements IUserService{
       user.setFullName(userResquest.getFullName());
       user.setPhone(userResquest.getPhone());
       user.setIdCountry(userResquest.getIdCountry());
-      user.setPassword(userResquest.getPassword());
+      user.setPassword(passwordEncoder.encode(userResquest.getPassword()));
       user.setRoles(role.ROLE_CUSTOMER);
 
       user = userRepository.save(user);
